@@ -72,7 +72,7 @@ console.log('hola')
 
   const isPublicPath = (url: string) => {
     const path = url.split('?')[0] ?? url
-    return path === '/' || path === '/favicon.ico' || path === '/api/auth/login'
+    return path === '/' || path === '/favicon.ico' || path === '/api/auth/login' || path === '/api/auth/register'
   }
 
   fastify.addHook('onRequest', async (request) => {
