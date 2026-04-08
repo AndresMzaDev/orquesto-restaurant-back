@@ -1,0 +1,17 @@
+# Dependencies & build
+node_modules
+dist
+*.tsbuildinfo
+
+# Env (keep .env.example committed)
+.env
+.env.*
+!.env.example
+
+# Logs & OS
+*.log
+logs
+.DS_Store
+
+# Local AI / editor
+.claude/
