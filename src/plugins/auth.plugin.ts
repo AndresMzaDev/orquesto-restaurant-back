@@ -8,7 +8,7 @@ export default fp(async (fastify: FastifyInstance) => {
   fastify.decorate('authenticate', async (request: FastifyRequest) => {
     const token = request.headers.authorization?.replace('Bearer ', '')
     if (!token) throw new UnauthorizedError('Token requerido')
-
+console.log('hola')
     try {
       const { data: authData, error: authError } = await supabase.auth.getUser(token)
       if (authError || !authData.user) throw new UnauthorizedError('Token inválido')
